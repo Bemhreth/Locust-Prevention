@@ -31,20 +31,4 @@ A user basically signs up to get started using locvent. Then a user logins into 
 
 </p>
 
----
 
-##### Check <a href="https://dscaastu.netlify.app/">Developer Student Clubs Addis Ababa Science and Technology University</a> for more.
----
-
-## Keep in touch and Join the vast community
-<p>
-  <a href="https://twitter.com/aastudsc">
-    <img alt="Twitter" src="https://img.shields.io/badge/twitter-1DA1F2?logo=twitter&logoColor=white&style=for-the-badge"/>
-  </a>
-  <a href="https://www.linkedin.com/company/developer-student-clubs-of-addis-ababa-science-and-technology-university">
-    <img alt="LinkedIn" src="https://img.shields.io/badge/linkedin-0077B5?logo=linkedin&logoColor=white&style=for-the-badge"/>
-  </a>
-  <a href="https://t.me/@dscaastu">
-    <img alt="Telegram" src="https://img.shields.io/badge/telegram-2CA5E0?logo=telegram&logoColor=white&style=for-the-badge"/>
-  </a>
-</p>
