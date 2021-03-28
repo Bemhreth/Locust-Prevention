@@ -1,6 +1,6 @@
 <img src="/locvent.png" alt="banner"/>
 
-# LocVent 
+# <span style="color:#64BC4B">LocVent</span>
 
 # 👋 እንኳን ወደ ሎክቬንት የጊትኸብ ፔጅ በሰላም መጣቹህ! 😃 :smiley:
 
@@ -24,7 +24,7 @@
 
 ---
 
-##### Check <a href="#">https://dscaastu.netlify.app/</a> for more.
+##### Check <a href="https://dscaastu.netlify.app/">Developer Student Clubs Addis Ababa Science and Technology University</a> for more.
 ---
 
 ## Keep in touch and Join the vast community
