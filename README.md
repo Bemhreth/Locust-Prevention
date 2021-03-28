@@ -4,11 +4,19 @@
 
 ## 👋 እንኳን ወደ ሎክቬንት የጊትኸብ ፔጅ በሰላም መጣቹህ! 😃 :smiley:
 
-##### Locvent is a software that uses modern machine learning techniques and tools by leveraging TensorFlow and Google Cloud Platform to alert and prevent locust outbreak on different locations so that proactive measures could be taken and a comprehensive and coordinated early warning system could be established in the context of sustainable development.   
+<p>
+Locvent is a software that uses modern machine learning techniques and tools by leveraging TensorFlow and Google Cloud Platform to alert and prevent locust outbreak on different locations so that proactive measures could be taken and a comprehensive and coordinated early warning system could be established in the context of sustainable development.   
+</p>
 
 ## How it works?
 
-##### A user basically signs up to get started using locvent. Then a user logins into the application where there will be an authentication process to let the user use the application service. Next the user will take a photo using the camera and submits. On submission the image will be uploaded to Google Cloud Platform where the image uploaded gets classified based on the trained models. First classification will be the locust type followed by vegatation and predicts where the next outbreak will happen. Lastly, after the analysis is completed the user is notified of the catastrophic level of locust outbreak and whom to contact based on the specified location for an emergency and proactive measures. The concerned body will get a notification from the local user about the situation and act upon consequently. 
+<p>
+A user basically signs up to get started using locvent. Then a user logins into the application where there will be an authentication process to let the user use the application service. Next the user will take a photo using the camera and submits. On submission the image will be uploaded to Google Cloud Platform where the image uploaded gets classified based on the trained models. First classification will be the locust type followed by vegatation and predicts where the next outbreak will happen. Lastly, after the analysis is completed the user is notified of the catastrophic level of locust outbreak and whom to contact based on the specified location for an emergency and proactive measures. The concerned body will get a notification from the local user about the situation and act upon consequently. 
+</p>
+
+<p>
+  Login/Register => Take Image => Submit => Classified on GCP => Report Result => Send Notification => Broadcast Notification
+</p>
 
 ## Technologies Used 
 
