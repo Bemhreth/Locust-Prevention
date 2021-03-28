@@ -1,16 +1,32 @@
-# loc_vent
+# LocVent
 
-A new Flutter project.
+<p>
+Locvent is a software that uses modern machine learning techniques and tools by leveraging TensorFlow and Google Cloud Platform to alert and prevent locust outbreak on different locations so that proactive measures could be taken and a comprehensive and coordinated early warning system could be established in the context of sustainable development.   
+</p>
 
-## Getting Started
+## How it works?
 
-This project is a starting point for a Flutter application.
+<p>
+A user basically signs up to get started using locvent. Then a user logins into the application where there will be an authentication process to let the user use the application service. Next the user will take a photo using the camera and submits. On submission the image will be uploaded to Google Cloud Platform where the image uploaded gets classified based on the trained models. First classification will be the locust type followed by vegatation and predicts where the next outbreak will happen. Lastly, after the analysis is completed the user is notified of the catastrophic level of locust outbreak and whom to contact based on the specified location for an emergency and proactive measures. The concerned body will get a notification from the local user about the situation and act upon consequently. 
+</p>
 
-A few resources to get you started if this is your first Flutter project:
+<p>
+  Login/Register => Take Image => Submit => Classified on GCP => Report Result => Send Notification => Broadcast Notification
+</p>
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Technologies Used 
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<p>
+  <img alt="HTML" src="https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=white&style=for-the-badge"/>
+  <img alt="CSS" src="https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=white&style=for-the-badge"/>
+  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=white&style=for-the-badge"/>
+  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white&style=for-the-badge"/>
+  <img alt="Flutter" src="https://img.shields.io/badge/Flutter-02569B?logo=flutter&logoColor=white&style=for-the-badge"/>
+  <img alt="Google Cloud Platform" src="https://img.shields.io/badge/GoogleCloud-4285F4?logo=google-cloud&logoColor=white&style=for-the-badge"/>
+  <img alt="Bootstrap4" src="https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white&style=for-the-badge"/>
+  <img alt="TensorFlow" src="https://img.shields.io/badge/TensorFlow-FF6F00?logo=TensorFlow&logoColor=white&style=for-the-badge"/>
+
+</p>
+
+
+
