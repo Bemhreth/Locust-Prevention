@@ -1,7 +1,5 @@
 # LocVent
 
-## 👋 እንኳን ወደ ሎክቬንት የጊትኸብ ፔጅ በሰላም መጣቹህ! 😃 :smiley:
-
 <p>
 Locvent is a software that uses modern machine learning techniques and tools by leveraging TensorFlow and Google Cloud Platform to alert and prevent locust outbreak on different locations so that proactive measures could be taken and a comprehensive and coordinated early warning system could be established in the context of sustainable development.   
 </p>
