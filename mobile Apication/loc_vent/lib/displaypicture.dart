@@ -4,9 +4,9 @@ import 'package:http/http.dart' as http;
 import 'package:async/async.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:loc_vent/resultpage.dart';
 import 'package:path/path.dart';
 
-import 'cameraread.dart';
 
 class DisplayPictureScreen extends StatelessWidget {
   final String imagePath;
@@ -72,40 +72,15 @@ class DisplayPictureScreen extends StatelessWidget {
                   // Take the Picture in a try / catch block. If anything goes wrong,
                   // catch the error.
                   upload(File(imagePath));
-
-                  showAlertDialog(BuildContext context) {
-                    // set up the button
-                    Widget okButton = FlatButton(
-                      child: Text("OK"),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => CamPage(),
-                          ),
-                        );
-                      },
-                    );
-
-                    // set up the AlertDialog
-                    AlertDialog alert = AlertDialog(
-                      title: Text("My title"),
-                      content: Text("This is my message."),
-                      actions: [
-                        okButton,
-                      ],
-                    );
-
-                    // show the dialog
-                    showDialog(
-                      context: context,
-                      builder: (BuildContext context) {
-                        return alert;
-                      },
-                    );
-                  }
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ResultPage(),
+                    ),
+                  );
                 }),
-              ),),
+              ),
+            ),
             SizedBox(height:height/28,),
           ],
         ),
