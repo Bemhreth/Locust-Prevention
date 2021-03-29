@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'cameraread.dart';
+
 class ResultPage extends StatefulWidget {
   @override
   _ResultPageState createState() => _ResultPageState();
@@ -30,7 +32,27 @@ class _ResultPageState extends State<ResultPage> {
               decoration: BoxDecoration(borderRadius: new BorderRadius.circular(30.0),
             ),
           ),
-          )],
+          ),
+          SizedBox(height:height/20,),
+          ButtonTheme(
+            minWidth: width/1.2,
+            height: height/12,
+            child: RaisedButton(
+                shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(10.0),
+                ),
+//                  shape: ,
+                child: Text('Ok I understand',style: TextStyle(color: Colors.white),),
+                color: Colors.blueGrey,
+                onPressed: () async {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CamPage(),
+                    ),
+                  );
+                }),
+          ),
+        ],
       ),
     );
   }
