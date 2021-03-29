@@ -12,6 +12,8 @@ import 'package:loc_vent/signinpage.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 
+import 'displaypicture.dart';
+
 class CamPage extends StatefulWidget {
   CamPage({Key key, this.title}) : super(key: key);
   final String title;
@@ -85,6 +87,7 @@ class _CamPageState extends State<CamPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('camera'),
+        backgroundColor: Colors.green,
         automaticallyImplyLeading: false,
         actions: <Widget>[
           Builder(builder: (BuildContext context) {
@@ -141,6 +144,7 @@ class _CamPageState extends State<CamPage> {
         );
       }),
         floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.green,
           child: Icon(Icons.camera_alt),
           // Provide an onPressed callback.
           onPressed: () async {
@@ -184,92 +188,6 @@ class _CamPageState extends State<CamPage> {
         }
       },
     ),
-    );
-  }
-}
-class DisplayPictureScreen extends StatelessWidget {
-  final String imagePath;
-
-  const DisplayPictureScreen({Key key, this.imagePath}) : super(key: key);
-  upload(File imageFile) async {
-    // open a bytestream
-    var stream = new http.ByteStream(DelegatingStream.typed(imageFile.openRead()));
-    // get file length
-    var length = await imageFile.length();
-
-    // string to uri
-    var uri = Uri.parse("http://34.71.91.164/uploadfile");
-
-    // create multipart request
-    var request = new http.MultipartRequest("POST", uri);
-
-    // multipart that takes file
-    var multipartFile = new http.MultipartFile('file', stream, length,
-        filename: basename(imageFile.path));
-
-    // add file to multipart
-    request.files.add(multipartFile);
-
-    // send
-    var response = await request.send();
-    print(response.statusCode);
-
-    // listen for response
-    response.stream.transform(utf8.decoder).listen((value) {
-      print(value);
-    });
-  }
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Display the Picture')),
-      // The image is stored as a file on the device. Use the `Image.file`
-      // constructor with the given path to display the image.
-      body: Image.file(File(imagePath)),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.send),
-        // Provide an onPressed callback.
-        onPressed: () async {
-          // Take the Picture in a try / catch block. If anything goes wrong,
-          // catch the error.
-          upload(File(imagePath));
-
-          showAlertDialog(BuildContext context) {
-
-            // set up the button
-            Widget okButton = FlatButton(
-              child: Text("OK"),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) =>CamPage(),
-                  ),
-                );
-              },
-            );
-
-            // set up the AlertDialog
-            AlertDialog alert = AlertDialog(
-              title: Text("My title"),
-              content: Text("This is my message."),
-              actions: [
-                okButton,
-              ],
-            );
-
-            // show the dialog
-            showDialog(
-              context: context,
-              builder: (BuildContext context) {
-                return alert;
-              },
-            );
-          }
-
-            // If the picture was taken, display it on a new screen.
-        },
-      ),
     );
   }
 }
