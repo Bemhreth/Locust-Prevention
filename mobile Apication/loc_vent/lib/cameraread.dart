@@ -160,7 +160,7 @@ class _CamPageState extends State<CamPage> {
                 // Store the picture in the temp directory.
                 // Find the temp directory using the `path_provider` plugin.
                 (await getTemporaryDirectory()).path,
-                '${DateTime.now()}.png',
+                '${DateTime.now()}.jpg',
               );
 
               // Attempt to take a picture and log where it's been saved.
