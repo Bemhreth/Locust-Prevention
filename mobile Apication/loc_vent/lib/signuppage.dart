@@ -1,9 +1,11 @@
+import 'dart:convert';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:loc_vent/signinpage.dart';
 
-import 'cameraread.dart';
+import 'album.dart';
 import 'loading.dart';
 
 class Second extends StatefulWidget {
@@ -16,6 +18,8 @@ class _SecondState extends State<Second> {
   final GlobalKey<State> _keyLoader = new GlobalKey<State>();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _placeController = TextEditingController();
+  final TextEditingController _phoneController = TextEditingController();
   final  auth = FirebaseAuth.instance;
   bool passvisibility = true;
   bool _success;
@@ -68,6 +72,7 @@ class _SecondState extends State<Second> {
   Widget build(BuildContext context) {
     double width=MediaQuery.of(context).size.width;
     double height=MediaQuery.of(context).size.height;
+    Future<Album> _futureAlbum;
     return Form(
       key: _formKey,
       child: Scaffold(
@@ -123,6 +128,7 @@ class _SecondState extends State<Second> {
                   width: width/1.2,
                   height: height/17,
                   child: TextFormField(
+                    controller: _phoneController,
                     decoration: InputDecoration(
                       hintText: 'Phone Number',
                       prefixIcon: Icon(Icons.phone),
@@ -143,6 +149,7 @@ class _SecondState extends State<Second> {
                   width: width/1.2,
                   height: height/17,
                   child: TextFormField(
+                    controller: _placeController,
                     decoration: InputDecoration(
                       hintText: 'Name of the place you live in',
                       prefixIcon: Icon(Icons.location_on),
@@ -208,6 +215,7 @@ class _SecondState extends State<Second> {
                     onPressed: () async {
                       if (_formKey.currentState.validate()) {
                         setState(() {
+                            _futureAlbum = createAlbum(_emailController.text,_phoneController.text,_placeController.text);
                           _register();
                           _isLoading? Center(child: CircularProgressIndicator(),): Navigator.push(context, MaterialPageRoute(builder: (context)=>Myapp()));
                         });
