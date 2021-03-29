@@ -9,9 +9,9 @@
  
 </p>
 
-## Vegitation Status Classification 
+## Vegetation Status Classification 
 <p>
-<br>In this phase the vegition index found from a satellite imagery is used to classify the vegitation stus of a given area.</br>
+<br>In this phase the vegition index found from a satellite imagery is used to classify the vegetation stus of a given area.</br>
 <br>If the vegitation status is green there is a high probability there will be a locust attack in that area.</br>
 
 </p>
