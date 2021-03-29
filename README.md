@@ -1,4 +1,8 @@
 # LocVent
+[![GitHub issues](https://img.shields.io/github/issues/Bemhreth/Locust-Prevention)](https://github.com/https://github.com/Bemhreth/Locust-Prevention/issues) 
+[![GitHub forks](https://img.shields.io/github/forks/Bemhreth/Locust-Prevention)](https://github.com/https://github.com/Bemhreth/Locust-Prevention/network)
+[![GitHub stars](https://img.shields.io/github/stars/Bemhreth/Locust-Prevention)](https://github.com/https://github.com/Bemhreth/Locust-Prevention/stargazers)
+
 
 <p>
 Locvent is a software that uses modern machine learning techniques and tools by leveraging TensorFlow and Google Cloud Platform to alert and prevent locust outbreak on different locations so that proactive measures could be taken and a comprehensive and coordinated early warning system could be established in the context of sustainable development.   
