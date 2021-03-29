@@ -1,7 +1,7 @@
 # LocVent
-[![GitHub issues](https://img.shields.io/github/issues/https://github.com/Bemhreth/Locust-Prevention)](https://github.com/https://github.com/Bemhreth/Locust-Prevention/issues) 
-[![GitHub forks](https://img.shields.io/github/forks/https://github.com/Bemhreth/Locust-Prevention)](https://github.com/https://github.com/Bemhreth/Locust-Prevention/network)
-[![GitHub stars](https://img.shields.io/github/stars/https://github.com/Bemhreth/Locust-Prevention)](https://github.com/https://github.com/Bemhreth/Locust-Prevention/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/Bemhreth/Locust-Prevention)](https://github.com/https://github.com/Bemhreth/Locust-Prevention/issues) 
+[![GitHub forks](https://img.shields.io/github/forks/Bemhreth/Locust-Prevention)](https://github.com/https://github.com/Bemhreth/Locust-Prevention/network)
+[![GitHub stars](https://img.shields.io/github/stars/Bemhreth/Locust-Prevention)](https://github.com/https://github.com/Bemhreth/Locust-Prevention/stargazers)
 
 `Flutter application that helps in early detection of Locust outbreak.`
 
