@@ -3,15 +3,15 @@
 
 ## locust Identification
 <p>
-<br>The first step is the identification of locust type grasshoper from the othors. deep is used to detect grasshopper</br> 
-<br>types that are dangerous or thac can become swarms when get the right conditions. The image sent from the user is </br>
-<br>feed to a deep learning model. The model classifies the image whether it is a dangerous or normal types of grasshoper.<br>
+<br>The first step is the identification of locust from the ohter grasshopers. Deep learning is used to detect grasshopper</br> 
+<br>types that are dangerous or that can become swarms when get the right conditions. The image sent from the user is </br>
+<br>feed to a deep learning model. The model classifies the image if it is a dangerous or normal types of grasshoper.<br>
  
 </p>
 
 ## Vegetation Status Classification 
 <p>
-<br>In this phase the vegition index found from a satellite imagery is used to classify the vegetation stus of a given area.</br>
+<br>In this phase the vegition index found from a satellite imagery is used to classify the vegetation status of a given area.</br>
 <br>If the vegitation status is green there is a high probability there will be a locust attack in that area.</br>
 
 </p>
