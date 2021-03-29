@@ -1,16 +1,40 @@
-# loc_vent
+# LocVent
+[![GitHub issues](https://img.shields.io/github/issues/https://github.com/Bemhreth/Locust-Prevention)](https://github.com/https://github.com/Bemhreth/Locust-Prevention/issues) 
+[![GitHub forks](https://img.shields.io/github/forks/https://github.com/Bemhreth/Locust-Prevention)](https://github.com/https://github.com/Bemhreth/Locust-Prevention/network)
+[![GitHub stars](https://img.shields.io/github/stars/https://github.com/Bemhreth/Locust-Prevention)](https://github.com/https://github.com/Bemhreth/Locust-Prevention/stargazers)
 
-A new Flutter project.
+`Flutter application that helps in early detection of Locust outbreak.`
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+<p align="center">
+<table border="1">
+<tr><td><img src="screenshots/Screenshot1.jpg" width="150" /></td>
+<td><img src="screenshots/Screenshot2.jpg" width="150" /></td>
+<td><img src="screenshots/Screenshot3.jpg" width="150" /></td>
+<td><img src="screenshots/Screenshot4.jpg" width="150" /></td>
+<td><img src="screenshots/Screenshot5.jpg" width="150" /></td></tr>
+<tr>
+<td><p align="center">Login</p></td>
+<td><p align="center">sign up</p></td>
+<td><p align="center">Taking picture of the locust</p></td>
+<td><p align="center">Submiting the picture</p></td>
+<td><p align="center">Viewing Result</p></td>
+</tr>
+</table></p>
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Features
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* [X] AD-FREE
+* [X] sign up
+* [X] sign in
+* [X] take a picture of Locust 
+* [X] sending picture
+* [X] Accepting feedback
+* [ ] Forgot password
+
+## Contribution
+        
+* Fork the repo
+* Create a new branch `git checkout -b '$username_$feature'`
+* Open a pull request 😁
