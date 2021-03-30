@@ -1,3 +1,6 @@
+[![GitHub issues](https://img.shields.io/github/issues/Bemhreth/Locust-Prevention)](https://github.com/https://github.com/Bemhreth/Locust-Prevention/issues) 
+[![GitHub forks](https://img.shields.io/github/forks/Bemhreth/Locust-Prevention)](https://github.com/https://github.com/Bemhreth/Locust-Prevention/network)
+[![GitHub stars](https://img.shields.io/github/stars/Bemhreth/Locust-Prevention)](https://github.com/https://github.com/Bemhreth/Locust-Prevention/stargazers)
 
 # LocVent
 
