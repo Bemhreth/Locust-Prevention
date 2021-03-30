@@ -29,6 +29,7 @@ A user basically signs up to get started using locvent. Then a user logins into 
   <img alt="Google Cloud Platform" src="https://img.shields.io/badge/GoogleCloud-4285F4?logo=google-cloud&logoColor=white&style=for-the-badge"/>
   <img alt="Bootstrap4" src="https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white&style=for-the-badge"/>
   <img alt="TensorFlow" src="https://img.shields.io/badge/TensorFlow-FF6F00?logo=TensorFlow&logoColor=white&style=for-the-badge"/>
+  <img alt="TensorFlow" src="https://img.shields.io/badge/GoogleCloud-FF6F00?logo=GoogleCloud&logoColor=white&style=for-the-badge"/>
 
 </p>
 
