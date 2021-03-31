@@ -12,6 +12,22 @@ Locvent is a software that uses modern machine learning techniques and tools by 
 
 ## Android Application
 
+<p align="center">
+<table border="1">
+<tr><td><img src="screenshots/Screenshot1.jpg" width="150" /></td>
+<td><img src="screenshots/Screenshot2.jpg" width="150" /></td>
+<td><img src="screenshots/Screenshot3.jpg" width="150" /></td>
+<td><img src="screenshots/Screenshot4.jpg" width="150" /></td>
+<td><img src="screenshots/Screenshot5.jpg" width="150" /></td></tr>
+<tr>
+<td><p align="center">Login</p></td>
+<td><p align="center">sign up</p></td>
+<td><p align="center">Taking picture of the locust</p></td>
+<td><p align="center">Submiting the picture</p></td>
+<td><p align="center">Viewing Result</p></td>
+</tr>
+</table></p>
+
 ## Trained Model
 
 ## How it works?
