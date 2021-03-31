@@ -54,6 +54,7 @@ Having these core functionality the trained model predicts next locust outbreak 
 * [X] receive notification  
 * [X] broadcast notification 
 
+<img src="web/photo_2021-04-01_00-14-02.jpg" width="800" />
 
 ## How it works?
 
