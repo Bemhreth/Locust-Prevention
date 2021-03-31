@@ -46,10 +46,6 @@ Download from GitHub latest release [Locvent](https://github.com/Bemhreth/Locust
 
 
 ## How to Contribute
-        
-* Fork the repo
-* Create a new branch `git checkout -b '$username_$feature'`
-* Open a pull request 😁
 
 Contributions are always **welcome and recommended**! Here is how for beginner's: [Get started with open source click here](https://youtu.be/GbqSvJs-6W4)
 
@@ -74,7 +70,7 @@ Contributions are always **welcome and recommended**! Here is how for beginner's
     * Make your changes only in ./buid Folder OR package.json OR ./dist/js/demo.js OR in any html files which nessary to contribute
     * Do not changes in ./dist/css/ AND ./dist/js/ Because its compiled files
     * `npm run production` (compile css/js files and test every pages are perfectly working fine, before creating pull request)
-4. Create a pull request
+4. Open a pull request 😁
 
 ## License
 
