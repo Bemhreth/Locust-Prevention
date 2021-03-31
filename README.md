@@ -14,7 +14,7 @@ Locvent is a software that uses modern machine learning techniques and tools by 
 
 <p align="center">
 <table border="1">
-<tr><td><img src="screenshots/Screenshot1.jpg" width="150" /></td>
+<tr><td><img src="mobile apication/screenshots/Screenshot1.jpg" width="150" /></td>
 <td><img src="screenshots/Screenshot2.jpg" width="150" /></td>
 <td><img src="screenshots/Screenshot3.jpg" width="150" /></td>
 <td><img src="screenshots/Screenshot4.jpg" width="150" /></td>
