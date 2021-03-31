@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'cameraread.dart';
 
 class ResultPage extends StatefulWidget {
+  ResultPage({Key key, this.res}) : super(key: key);
+  final String res;
   @override
   _ResultPageState createState() => _ResultPageState();
 }
@@ -11,6 +13,12 @@ class ResultPage extends StatefulWidget {
 class _ResultPageState extends State<ResultPage> {
   @override
   Widget build(BuildContext context) {
+    print(widget.res+' here you go beginning');
+    bool isDangerous=false;
+    if(widget.res=='1')
+     isDangerous=false;
+    else
+     isDangerous=true;
     double width=MediaQuery.of(context).size.width;
     double height=MediaQuery.of(context).size.height;
     return Scaffold(
@@ -27,7 +35,7 @@ class _ResultPageState extends State<ResultPage> {
               height: height/2,
               child: Card(
                 elevation: 5,
-                 child:Center(child: Text('Result')),
+                 child:isDangerous?Center(child: SizedBox( width: width/1.7,child: Text('The result shows that the type of the locust is dangerous so stay vigilant and do all the necessary precautions and if necessary local authorities will be in touch',style: TextStyle(color: Colors.black,fontSize:23 ,)))):Text('No need to worry this type of locust is a normal one it wont cause any harm'),
               ),
               decoration: BoxDecoration(borderRadius: new BorderRadius.circular(30.0),
             ),
@@ -44,6 +52,7 @@ class _ResultPageState extends State<ResultPage> {
                 child: Text('Ok I understand',style: TextStyle(color: Colors.white),),
                 color: Colors.blueGrey,
                 onPressed: () async {
+                  print(widget.res.toString()+"here is ur file");
                   Navigator.push(
                     context,
                     MaterialPageRoute(

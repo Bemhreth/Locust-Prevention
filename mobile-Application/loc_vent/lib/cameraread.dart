@@ -1,8 +1,4 @@
-import 'dart:convert';
-import 'dart:io';
-import 'package:http/http.dart' as http;
 import 'dart:async';
-import 'package:async/async.dart';
 
 import 'package:camera/camera.dart';
 import 'package:flutter/cupertino.dart';
@@ -37,23 +33,7 @@ class _CamPageState extends State<CamPage> {
 
   }
 
-  void onCaptureButtonPressed() async {  //on camera button press
-//    try {
-//
-//      final path = join(
-//        (await getTemporaryDirectory()).path, //Temporary path
-//        '$pageStatus${DateTime.now()}.png',
-//      );
-//      ImagePath = path;
-//      await _controller.takePicture(path); //take photo
-//
-//      setState(() {
-//        showCapturedPhoto = true;
-//      });
-//    } catch (e) {
-//      print(e);
-//    }
-  }
+
   void dispose() {
     // TODO: implement dispose
     _controller?.dispose();
@@ -160,21 +140,12 @@ class _CamPageState extends State<CamPage> {
                 // Store the picture in the temp directory.
                 // Find the temp directory using the `path_provider` plugin.
                 (await getTemporaryDirectory()).path,
-                '${DateTime.now()}.jpg',
+                '${widget.title}|${DateTime.now()}.jpg',
               );
 
               // Attempt to take a picture and log where it's been saved.
               await _controller.takePicture(path);
 //              upload(File(path));
-
-              if (path != null) SnackBar(
-                  content: Text('Yay! A SnackBar!'),
-                  action: SnackBarAction(
-                    label: 'Undo',
-                    onPressed: () {
-                      // Some code to undo the change.
-                    },
-                  ));
               // If the picture was taken, display it on a new screen.
               Navigator.push(
                 context,
