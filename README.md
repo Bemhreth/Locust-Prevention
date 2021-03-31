@@ -8,17 +8,17 @@
 Locvent is a software that uses modern machine learning techniques and tools by leveraging TensorFlow and Google Cloud Platform to alert and prevent locust outbreak on different locations so that proactive measures could be taken and a comprehensive and coordinated early warning system could be established in the context of sustainable development.   
 </p>
 
-## Web
-
 ## Android Application
+
+`Flutter application that helps in early detection of Locust outbreak.`
 
 <p align="center">
 <table border="1">
-<tr><td><img src="mobile apication/screenshots/Screenshot1.jpg" width="150" /></td>
-<td><img src="screenshots/Screenshot2.jpg" width="150" /></td>
-<td><img src="screenshots/Screenshot3.jpg" width="150" /></td>
-<td><img src="screenshots/Screenshot4.jpg" width="150" /></td>
-<td><img src="screenshots/Screenshot5.jpg" width="150" /></td></tr>
+<tr><td><img src="Screenshot1.jpg" width="150" /></td>
+<td><img src="Screenshot2.jpg" width="150" /></td>
+<td><img src="Screenshot3.jpg" width="150" /></td>
+<td><img src="Screenshot4.jpg" width="150" /></td>
+<td><img src="Screenshot5.jpg" width="150" /></td></tr>
 <tr>
 <td><p align="center">Login</p></td>
 <td><p align="center">sign up</p></td>
@@ -28,7 +28,32 @@ Locvent is a software that uses modern machine learning techniques and tools by 
 </tr>
 </table></p>
 
+
+* [X] Take a picture 
+* [X] Submit picture
+* [X] Get notified 
+
+
 ## Trained Model
+<p>
+  The Trained Model contains 2 models. <br/>
+  
+  - Classification of Locust Type <br/>
+  - Surrounding Vegetation Satellite Image Analysis <br/>
+  
+Having these core functionality the trained model predicts next locust outbreak locations for proactive measures.
+  
+  - TensorFlow and Keras with Google Cloud Platform are the major technologies used here. 
+
+</p>
+
+## Web 
+
+`The Web version of locvent is applicable for receiving locust outbreak notification and simply broadcasting the notification to the concern body accordingly.`
+
+* [X] receive notification  
+* [X] broadcast notification 
+
 
 ## How it works?
 
