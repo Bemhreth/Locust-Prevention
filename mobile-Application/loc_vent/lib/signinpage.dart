@@ -1,32 +1,28 @@
-import 'dart:convert';
-
+import 'dart:ui';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:loc_vent/signinpage.dart';
+import 'package:loc_vent/signuppage.dart';
 
-import 'album.dart';
+import 'cameraread.dart';
 import 'loading.dart';
 
-class Second extends StatefulWidget {
+class Myapp extends StatefulWidget {
   @override
-  _SecondState createState() => _SecondState();
+  _MyappState createState() => _MyappState();
 }
 
-class _SecondState extends State<Second> {
+class _MyappState extends State<Myapp> {
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  final GlobalKey<State> _keyLoader = new GlobalKey<State>();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _placeController = TextEditingController();
-  final TextEditingController _phoneController = TextEditingController();
-  final  auth = FirebaseAuth.instance;
-  bool passvisibility = true;
+  final GlobalKey<State> _keyLoader = new GlobalKey<State>();
+  String userName;
   bool _success;
-  bool _isLoading=true;
+  bool passvisibility = true;
   String _userEmail;
-  static const String em = "@locvest.com";
-
+  final  auth = FirebaseAuth.instance;
+  static const String em ="@locvest.com";
   String validatePassword(String value){
     if (value.isEmpty) {
       return "* Required";
@@ -42,37 +38,27 @@ class _SecondState extends State<Second> {
     else
       return null;
   }
-
-  void _register() async {
-    final User user = (await
-    auth.createUserWithEmailAndPassword(
+  void _signInWithEmailAndPassword() async {
+    final User user = (await auth.signInWithEmailAndPassword(
       email: _emailController.text+em,
       password: _passwordController.text,
-    )
-    ).user;
+    )).user;
+
     if (user != null) {
       setState(() {
         _success = true;
-        _isLoading=false;
+        _userEmail = user.email;
       });
     } else {
       setState(() {
-        _success = true;
-        _isLoading=false;
+        _success = false;
       });
     }
-  }
-  @override
-  void dispose() {
-    _emailController.dispose();
-    _passwordController.dispose();
-    super.dispose();
   }
   @override
   Widget build(BuildContext context) {
     double width=MediaQuery.of(context).size.width;
     double height=MediaQuery.of(context).size.height;
-    Future<Album> _futureAlbum;
     return Form(
       key: _formKey,
       child: Scaffold(
@@ -87,9 +73,10 @@ class _SecondState extends State<Second> {
                   borderRadius: BorderRadius.circular(32.0),
                   child: Image.asset('assets/locust.jpg',fit: BoxFit.fill,
                     width: width,
-                    height: height*0.35,
+                    height: height*0.45,
                   ),
                 ),
+                SizedBox(height: height/25,),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
@@ -103,69 +90,28 @@ class _SecondState extends State<Second> {
                   ),
                 ),
                 SizedBox(height:height/28,),
-                Container(
-                  width: width/1.2,
-                  height: height/17,
-                  child: TextFormField(
+            Container(
+              width: width/1.2,
+              height: height/17,
+              child: TextFormField(
                     controller: _emailController,
                     decoration: InputDecoration(
-                      hintText: 'Name',
+                      hintText: 'User Name',
                       prefixIcon: Icon(Icons.person_pin),
                       border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8.0),
-                          borderSide: new BorderSide(color: Colors.green)),
-                    ),
-                    validator: (value) {
+                        borderRadius: BorderRadius.circular(8.0),
+                        borderSide: new BorderSide(color: Colors.green)),
+                      ),
+                     validator: (value) {
                       if (value.isEmpty) {
                         return "* Required";
                       } else
                         return null;
-                    },
+                            },
+              ),
+
                   ),
-                ),
-                SizedBox(height:height/30,),
-                Container(
-                  width: width/1.2,
-                  height: height/17,
-                  child: TextFormField(
-                    controller: _phoneController,
-                    decoration: InputDecoration(
-                      hintText: 'Phone Number',
-                      prefixIcon: Icon(Icons.phone),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8.0),
-                          borderSide: new BorderSide(color: Colors.green)),
-                    ),
-                    validator: (value) {
-                      if (value.isEmpty) {
-                        return "* Required";
-                      } else
-                        return null;
-                    },
-                  ),
-                ),
-                SizedBox(height:height/30,),
-                Container(
-                  width: width/1.2,
-                  height: height/17,
-                  child: TextFormField(
-                    controller: _placeController,
-                    decoration: InputDecoration(
-                      hintText: 'Name of the place you live in',
-                      prefixIcon: Icon(Icons.location_on),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8.0),
-                          borderSide: new BorderSide(color: Colors.green)),
-                    ),
-                    validator: (value) {
-                      if (value.isEmpty) {
-                        return "* Required";
-                      } else
-                        return null;
-                    },
-                  ),
-                ),
-            SizedBox(height:height/30,),
+                SizedBox(height: height/30,),
                 Container(
                   width: width/1.2,
                   height: height/17,
@@ -180,7 +126,7 @@ class _SecondState extends State<Second> {
                         onTap: (){
                           setState(() {
                             if(passvisibility)
-                              passvisibility = false;
+                            passvisibility = false;
                             else
                               passvisibility = true;
                           });
@@ -193,7 +139,7 @@ class _SecondState extends State<Second> {
                     validator: validatePassword,
                   ),
                 ),
-                SizedBox(height:height/30,),
+                SizedBox(height: height/30,),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Row(
@@ -203,21 +149,50 @@ class _SecondState extends State<Second> {
                     ],
                   ),
                 ),
-                SizedBox(height:height/49),
+                SizedBox(height:height/30),
                 SizedBox(
                   width: width/2.3,
                   child: RaisedButton(
-                    shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0),
-                    ),
+                      shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0),
+                      ),
 //                  shape: ,
-                    child: Text('Register',style: TextStyle(color: Colors.white),),
+                    child: Text('Login',style: TextStyle(color: Colors.white)),
                     color: Colors.green,
                     onPressed: () async {
+                      userName=_emailController.text;
                       if (_formKey.currentState.validate()) {
-                        setState(() {
-                            _futureAlbum = createAlbum(_emailController.text,_phoneController.text,_placeController.text);
-                          _register();
-                          _isLoading? Center(child: CircularProgressIndicator(),): Navigator.push(context, MaterialPageRoute(builder: (context)=>Myapp()));
+                        setState(() async {
+                          _signInWithEmailAndPassword();
+//                          _handleSignin(context);
+                          Dialogs.showLoadingDialog(context, _keyLoader);
+                          if (await FirebaseAuth.instance.currentUser != null)
+                          {
+                            Navigator.of(context).pop();
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>CamPage(title:userName,)));
+                          }
+                          else{
+                            try{
+                              Navigator.of(context).pop();
+                              return showDialog(
+                                context: context,
+                                builder: (ctx) => AlertDialog(
+                                  title: Text("Error"),
+                                  content: Text("You have entered the wrong password or username"),
+                                  actions: <Widget>[
+                                    FlatButton(
+                                      onPressed: () {
+                                        Navigator.of(ctx).pop();
+                                      },
+                                      child: Text("ok"),
+                                    ),
+                                  ],
+                                ),
+                              );
+                            }catch(error){
+                              print('hello');
+                            }
+
+                          }
                         });
                       }else{
                         print("Not Validated");
@@ -225,19 +200,19 @@ class _SecondState extends State<Second> {
                     },
                   ),
                 ),
-            SizedBox(height:height/39),
+                SizedBox(height:height/29),
                 GestureDetector(
                   onTap: (){
                     setState(() {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Myapp()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Second()));
                     });
                   },
                   child: Text.rich(
                     TextSpan(
-                        text: 'Already have an account',
+                        text: 'Don\'t have an account',
                         children: [
                           TextSpan(
-                            text: ' Login',
+                            text: ' Register',
                             style: TextStyle(
                                 color: Colors.green
                             ),
@@ -246,7 +221,7 @@ class _SecondState extends State<Second> {
                     ),
                   ),
                 ),
-                SizedBox(height:height/90),
+                SizedBox(height:height/35),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Row(
@@ -256,6 +231,7 @@ class _SecondState extends State<Second> {
                     ],
                   ),
                 ),
+
               ],
             ),
           ),
@@ -263,15 +239,15 @@ class _SecondState extends State<Second> {
       ),
     );
   }
-  Future<void> _handleSignup(BuildContext context) async {
+  Future<void> _handleSignin(BuildContext context) async {
     try {
       Dialogs.showLoadingDialog(context, _keyLoader);//invoking login
-      await auth.createUserWithEmailAndPassword(
-        email: _emailController.text+em,
-        password: _passwordController.text,
-      );
-      Navigator.of(_keyLoader.currentContext,rootNavigator: true).pop();//close the dialoge
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>Myapp()));
+      if(FirebaseAuth.instance.currentUser?.uid != null) {
+        Navigator.of(_keyLoader.currentContext,rootNavigator: true).pop();//close the dialoge
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>Myapp()));
+      }
+      else
+        Navigator.of(context).pop();
     } catch (error) {
       print(error);
     }
