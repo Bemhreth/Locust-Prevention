@@ -8,8 +8,9 @@
 
 <p align="center">
 <table border="1">
+<td><img src="photo_2021-04-01_00-14-00.jpg" width="500" /></td>
 <td><img src="photo_2021-04-01_00-14-02.jpg" width="500" /></td>
-<td><img src="photo_2021-04-01_00-14-00.jpg" width="500" /></td></tr>
+</tr>
 <tr>
 <td><p align="center">Admin Dashboard</p></td>
 <td><p align="center">Receive emergency report from users</p></td>
