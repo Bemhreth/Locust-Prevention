@@ -35,7 +35,8 @@ class _ResultPageState extends State<ResultPage> {
               height: height/2,
               child: Card(
                 elevation: 5,
-                 child:isDangerous?Center(child: SizedBox( width: width/1.7,child: Text('The result shows that the type of the locust is dangerous so stay vigilant and do all the necessary precautions and if necessary local authorities will be in touch',style: TextStyle(color: Colors.black,fontSize:23 ,)))):Text('No need to worry this type of locust is a normal one it wont cause any harm'),
+                 child:isDangerous?Center(child: SizedBox( width: width/1.7,child: Text('The result shows that the type of the locust is dangerous so stay vigilant and do all the necessary precautions and if necessary local authorities will be in touch',style: TextStyle(color: Colors.black,fontSize:23 ,)))):
+                 Center(child: SizedBox( width: width/1.7,child: Text('No need to worry this type of locust is a normal one it wont cause any harm',style: TextStyle(color: Colors.black,fontSize:23 ,)))),
               ),
               decoration: BoxDecoration(borderRadius: new BorderRadius.circular(30.0),
             ),

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/bemhreth/Desktop/Locust Prevention/mobile Apication/loc_vent/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ky/values-ky.xml",
+            "outputFile": "/home/bemhreth/Desktop/Locust Prevention/mobile-Application/loc_vent/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ky/values-ky.xml",
             "map": [
                 {
                     "source": "/home/bemhreth/.gradle/caches/transforms-2/files-2.1/4983febd8e9842f6142ed70a7d49b633/jetified-play-services-basement-17.1.0/res/values-ky/values.xml",

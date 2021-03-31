@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/bemhreth/Desktop/Locust Prevention/mobile Apication/loc_vent/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-or/values-or.xml",
+            "outputFile": "/home/bemhreth/Desktop/Locust Prevention/mobile-Application/loc_vent/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-or/values-or.xml",
             "map": [
                 {
                     "source": "/home/bemhreth/.gradle/caches/transforms-2/files-2.1/3e26ef26d15f163a2f1a31a2130a0254/core-1.1.0/res/values-or/values-or.xml",

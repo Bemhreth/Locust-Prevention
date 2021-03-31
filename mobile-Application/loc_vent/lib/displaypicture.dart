@@ -14,37 +14,7 @@ class DisplayPictureScreen extends StatelessWidget {
 
   const DisplayPictureScreen({Key key, this.imagePath, this.name}) : super(key: key);
 
-  upload(File imageFile) async {
-    // open a bytestream
-    var stream = new http.ByteStream(DelegatingStream.typed(imageFile.openRead()));
-    // get file length
-    var length = await imageFile.length();
 
-    // string to uri
-    var uri = Uri.parse("http://34.71.91.164/uploadfile");
-
-    // create multipart request
-    var request = new http.MultipartRequest("POST", uri);
-
-    // multipart that takes file
-    var multipartFile = new http.MultipartFile('file', stream, length,
-        filename: basename(imageFile.path)
-    );
-
-    // add file to multipart
-    request.files.add(multipartFile);
-
-    // send
-    var response = await request.send();
-    print(response.statusCode);
-String res;
-    // listen for response
-    response.stream.transform(utf8.decoder).listen((value) {
-      print(value);
-      res=value;
-    });
-    return res;
-  }
   @override
   Widget build(BuildContext context) {
     String result1;
@@ -106,13 +76,11 @@ String res;
                     print(value);
                     res=value;
                   });
-                  result1=res;
-//                  result1=upload(File(imagePath)).toString();
                   await http.MultipartRequest("POST", Uri.parse("http://34.71.91.164/uploadfile")).send();
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ResultPage(res:result1),
+                      builder: (context) => ResultPage(res:res),
                     ),
                   );
                 }),
