@@ -1,69 +1,42 @@
-# Introduction
+# LocVent
+[![GitHub issues](https://img.shields.io/github/issues/Bemhreth/Locust-Prevention)](https://github.com/https://github.com/Bemhreth/Locust-Prevention/issues) 
+[![GitHub forks](https://img.shields.io/github/forks/Bemhreth/Locust-Prevention)](https://github.com/https://github.com/Bemhreth/Locust-Prevention/network)
+[![GitHub stars](https://img.shields.io/github/stars/Bemhreth/Locust-Prevention)](https://github.com/https://github.com/Bemhreth/Locust-Prevention/stargazers)
 
-[![npm version](https://img.shields.io/npm/v/admin-lte/latest.svg)](https://www.npmjs.com/package/admin-lte)
-[![Packagist](https://img.shields.io/packagist/v/almasaeed2010/adminlte.svg)](https://packagist.org/packages/almasaeed2010/adminlte)
-[![CDNJS](https://img.shields.io/cdnjs/v/admin-lte.svg)](https://cdnjs.com/libraries/admin-lte)
-[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/from-referrer/)
+`Web based admin dashboard that helps in early notification of locust outbreak for proactive measures.`
 
-**AdminLTE** is a fully responsive administration template. Based on **[Bootstrap 4.5](https://getbootstrap.com/)** framework and also the JS/jQuery plugin.
-Highly customizable and easy to use. Fits many screen resolutions from small mobile devices to large desktops.
 
-**Preview on [AdminLTE.io](https://adminlte.io/themes/v3)**
+<p align="center">
+<table border="1">
+<td><img src="screenshots/Screenshot2.jpg" width="150" /></td>
+<td><img src="screenshots/Screenshot5.jpg" width="150" /></td></tr>
+<tr>
+<td><p align="center">sign up</p></td>
+<td><p align="center">Receive emergency report from users</p></td>
+<td><p align="center"></p></td>
+</tr>
+</table></p>
 
-## Looking for Premium Templates?
 
-AdminLTE.io just opened a new premium templates page. Hand picked to ensure the best quality and the most affordable
-prices. Visit <https://adminlte.io/premium> for more information.
+## Features
 
-!["AdminLTE Presentation"](https://adminlte.io/AdminLTE3.png "AdminLTE Presentation")
-
-**AdminLTE** has been carefully coded with clear comments in all of its JS, SCSS and HTML files.
-SCSS has been used to increase code customizability.
+* [X] AD-FREE
+* [X] Register 
+* [X] Login
+* [X] Notification to Central Admin  
+* [X] Broadcast Notification 
+* [X] Track Progress 
+* [ ] Forgot password
 
 ## Installation
-
 There are multiple ways to install AdminLTE.
+  - Download zip from GitHub
+  - Clone repository on local device
+  - Clone repository using GitHub Desktop
 
-### Download & Changelog:
+### Download:
 
-Download from GitHub latest release [AdminLTE 3](https://github.com/ColorlibHQ/AdminLTE/latest).
-Visit the [releases](https://github.com/ColorlibHQ/AdminLTE/releases) page to view the changelog.
-Legacy Releases are [AdminLTE 2](https://github.com/ColorlibHQ/AdminLTE/releases/tag/v2.4.18) / [AdminLTE 1](https://github.com/ColorlibHQ/AdminLTE/releases/tag/1.3.1).
-
-### Using The Command Line:
-
-_**Important Note**: To install it via npm/Yarn, you need at least Node.js 10 or higher._
-
-- **Via npm**
-
-    ```bash
-    npm install admin-lte@^3.0 --save
-    ```
-
-- **Via Yarn**
-
-    ```bash
-    yarn add admin-lte@^3.0
-    ```
-
-- **Via Composer**
-
-    ```bash
-    composer require "almasaeed2010/adminlte=~3.0"
-    ```
-
-- **Via Git**
-
-    Clone to your machine
-
-    ```bash
-    git clone https://github.com/ColorlibHQ/AdminLTE.git
-    ```
-
-## Documentation
-
-Visit the [online documentation](https://adminlte.io/docs/3.1/) for the most
-updated guide. Information will be added on a weekly basis.
+Download from GitHub latest release [Locvent](https://github.com/Bemhreth/Locust-Prevention).
 
 ## Browsers support
 
@@ -71,7 +44,12 @@ updated guide. Information will be added on a weekly basis.
 | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- |
 | IE10, IE11, Edge| last 2 versions| last 2 versions| last 2 versions| last 2 versions| last 2 versions| last 2 versions| last 2 versions| last 2 versions
 
+
 ## How to Contribute
+        
+* Fork the repo
+* Create a new branch `git checkout -b '$username_$feature'`
+* Open a pull request 😁
 
 Contributions are always **welcome and recommended**! Here is how for beginner's: [Get started with open source click here](https://youtu.be/GbqSvJs-6W4)
 
@@ -85,9 +63,9 @@ Contributions are always **welcome and recommended**! Here is how for beginner's
     * Clone to your machine
 
     ```bash
-    git clone https://github.com/YOUR_USERNAME/AdminLTE.git
+    git clone https://github.com/YOUR_USERNAME/Locust-Prevention.git
     ```
-    * Create a new branch
+    * Create a new branch `git checkout -b '$username_$feature'`
 3. Compile dist files (Development) :
     * To compile the dist files you need Node.js 10 or higher/npm (node package manager)
     * Delete ./package-lock.json file
@@ -98,33 +76,24 @@ Contributions are always **welcome and recommended**! Here is how for beginner's
     * `npm run production` (compile css/js files and test every pages are perfectly working fine, before creating pull request)
 4. Create a pull request
 
-### Online one-click setup for contributing
-
-You can use Gitpod(an online IDE which is free for Open Source) for working on issues or making Prs. With a single click it will launch a workspace and automatically:
-
-- clone the `AdminLTE` repo.
-- install the dependencies.
-- run `yarn dev` to start the server.
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/from-referrer/)
-
-### Compile dist files
-
-To compile the dist files you need Node.js/npm, clone/download the repo then:
-
-1. `npm install` (install npm deps)
-2. _Optional:_ `npm run dev` (developer mode, autocompile with browsersync support for live demo)
-3. `npm run production` (compile css/js files)
-
 ## License
 
-AdminLTE is an open source project by [AdminLTE.io](https://adminlte.io) that is licensed under [MIT](https://opensource.org/licenses/MIT).
-AdminLTE.io reserves the right to change the license of future releases.
+Locvent is an open source project by Cassopia that is licensed under Mozilla Public License 2.0.
+Cassopia reserves the right to change the license of future releases.
 
-## Image Credits
 
-- [Pixeden](http://www.pixeden.com/psd-web-elements/flat-responsive-showcase-psd)
-- [Graphicsfuel](https://www.graphicsfuel.com/2013/02/13-high-resolution-blur-backgrounds/)
-- [Pickaface](https://pickaface.net/)
-- [Unsplash](https://unsplash.com/)
-- [Uifaces](http://uifaces.com/)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
