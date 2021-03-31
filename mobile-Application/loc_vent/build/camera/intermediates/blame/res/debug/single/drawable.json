@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/home/bemhreth/Desktop/loc_vent/build/camera/intermediates/res/merged/debug/drawable/notification_bg_low.xml",
+        "source": "/home/bemhreth/.gradle/caches/transforms-2/files-2.1/3e26ef26d15f163a2f1a31a2130a0254/core-1.1.0/res/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "/home/bemhreth/Desktop/loc_vent/build/camera/intermediates/res/merged/debug/drawable/notification_bg.xml",
+        "source": "/home/bemhreth/.gradle/caches/transforms-2/files-2.1/3e26ef26d15f163a2f1a31a2130a0254/core-1.1.0/res/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "/home/bemhreth/Desktop/loc_vent/build/camera/intermediates/res/merged/debug/drawable/notification_icon_background.xml",
+        "source": "/home/bemhreth/.gradle/caches/transforms-2/files-2.1/3e26ef26d15f163a2f1a31a2130a0254/core-1.1.0/res/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "/home/bemhreth/Desktop/loc_vent/build/camera/intermediates/res/merged/debug/drawable/notification_tile_bg.xml",
+        "source": "/home/bemhreth/.gradle/caches/transforms-2/files-2.1/3e26ef26d15f163a2f1a31a2130a0254/core-1.1.0/res/drawable/notification_tile_bg.xml"
+    }
+]
