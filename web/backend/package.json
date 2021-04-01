@@ -1,0 +1,30 @@
+{
+  "name": "index.js",
+  "version": "1.0.0",
+  "description": "locust",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow/tfjs": "^3.3.0",
+    "@tensorflow/tfjs-node": "^3.3.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "formidable": "^1.2.2",
+    "get-image-pixels": "^1.0.1",
+    "get-pixels": "^3.3.2",
+    "googleapis": "^68.0.0",
+    "imagemin": "^7.0.1",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "is-jpg": "^2.0.0",
+    "jpeg-js": "^0.4.3",
+    "mongoose": "^5.12.2",
+    "sharp": "^0.27.2"
+  }
+}
