@@ -15,10 +15,10 @@ class _ResultPageState extends State<ResultPage> {
   Widget build(BuildContext context) {
     print(widget.res+' here you go beginning');
     bool isDangerous=false;
-    if(widget.res=='1')
-     isDangerous=false;
-    else
+    if(widget.res=='0')
      isDangerous=true;
+    else
+     isDangerous=false;
     double width=MediaQuery.of(context).size.width;
     double height=MediaQuery.of(context).size.height;
     return Scaffold(

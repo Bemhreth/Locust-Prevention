@@ -7,12 +7,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:loc_vent/resultpage.dart';
 import 'package:path/path.dart';
 
+import 'loading.dart';
+
 
 class DisplayPictureScreen extends StatelessWidget {
   final String imagePath;
   final String name;
-
-  const DisplayPictureScreen({Key key, this.imagePath, this.name}) : super(key: key);
+  final GlobalKey<State> _keyLoader = new GlobalKey<State>();
+  DisplayPictureScreen({Key key, this.imagePath, this.name}) : super(key: key);
 
 
   @override
@@ -76,7 +78,8 @@ class DisplayPictureScreen extends StatelessWidget {
                     print(value);
                     res=value;
                   });
-                  await http.MultipartRequest("POST", Uri.parse("http://34.71.91.164/uploadfile")).send();
+                  _handle(context,res);
+//                  await http.MultipartRequest("POST", Uri.parse("http://34.71.91.164/uploadfile")).send();
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -92,5 +95,21 @@ class DisplayPictureScreen extends StatelessWidget {
       ),
       backgroundColor: Colors.green,
     );
+  }
+  Future<void> _handle(BuildContext context,String result2) async {
+    try {
+      Dialogs.showLoadingDialog(context, _keyLoader);//invoking login
+      await http.MultipartRequest("POST", Uri.parse("http://34.71.91.164/uploadfile")).send();
+      print(result2+"check");
+      Navigator.of(_keyLoader.currentContext,rootNavigator: true).pop();//close the dialoge
+//      Navigator.push(
+//        context,
+//        MaterialPageRoute(
+//          builder: (context) => ResultPage(res:result2),
+//        ),
+//      );
+    } catch (error) {
+      print(error);
+    }
   }
 }

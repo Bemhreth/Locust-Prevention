@@ -1,5 +1,9 @@
-import 'dart:convert';
+import 'dart:async';
 
+import 'package:location/location.dart';
+import 'package:geocoder/geocoder.dart';
+import 'package:intl/intl.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +18,14 @@ class Second extends StatefulWidget {
 }
 
 class _SecondState extends State<Second> {
+  LocationData _currentPosition;
+  String _address,_dateTime;
+  GoogleMapController mapController;
+  Marker marker;
+  Location location = Location();
+
+  GoogleMapController _controller;
+  LatLng _initialcameraposition = LatLng(0.5937, 0.9629);
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final GlobalKey<State> _keyLoader = new GlobalKey<State>();
   final TextEditingController _emailController = TextEditingController();
@@ -26,7 +38,53 @@ class _SecondState extends State<Second> {
   bool _isLoading=true;
   String _userEmail;
   static const String em = "@locvest.com";
+  getLoc() async{
+    bool _serviceEnabled;
+    PermissionStatus _permissionGranted;
 
+    _serviceEnabled = await location.serviceEnabled();
+    if (!_serviceEnabled) {
+      _serviceEnabled = await location.requestService();
+      if (!_serviceEnabled) {
+        return;
+      }
+    }
+
+    _permissionGranted = await location.hasPermission();
+    if (_permissionGranted == PermissionStatus.denied) {
+      _permissionGranted = await location.requestPermission();
+      if (_permissionGranted != PermissionStatus.granted) {
+        return;
+      }
+    }
+
+    _currentPosition = await location.getLocation();
+    _initialcameraposition = LatLng(_currentPosition.latitude,_currentPosition.longitude);
+    location.onLocationChanged.listen((LocationData currentLocation) {
+      print("${currentLocation.longitude} : ${currentLocation.longitude}");
+      setState(() {
+        _currentPosition = currentLocation;
+        _initialcameraposition = LatLng(_currentPosition.latitude,_currentPosition.longitude);
+
+        DateTime now = DateTime.now();
+        _dateTime = DateFormat('EEE d MMM kk:mm:ss ').format(now);
+        _getAddress(_currentPosition.latitude, _currentPosition.longitude)
+            .then((value) {
+          setState(() {
+            _address = "${value.first.addressLine}";
+          });
+        });
+      });
+    });
+  }
+
+
+  Future<List<Address>> _getAddress(double lat, double lang) async {
+    final coordinates = new Coordinates(lat, lang);
+    List<Address> add =
+    await Geocoder.local.findAddressesFromCoordinates(coordinates);
+    return add;
+  }
   String validatePassword(String value){
     if (value.isEmpty) {
       return "* Required";
@@ -149,27 +207,6 @@ class _SecondState extends State<Second> {
                   width: width/1.2,
                   height: height/17,
                   child: TextFormField(
-                    controller: _placeController,
-                    decoration: InputDecoration(
-                      hintText: 'Name of the place you live in',
-                      prefixIcon: Icon(Icons.location_on),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8.0),
-                          borderSide: new BorderSide(color: Colors.green)),
-                    ),
-                    validator: (value) {
-                      if (value.isEmpty) {
-                        return "* Required";
-                      } else
-                        return null;
-                    },
-                  ),
-                ),
-            SizedBox(height:height/30,),
-                Container(
-                  width: width/1.2,
-                  height: height/17,
-                  child: TextFormField(
                     controller: _passwordController,
                     obscureText: passvisibility,
                     decoration: InputDecoration(
@@ -215,9 +252,13 @@ class _SecondState extends State<Second> {
                     onPressed: () async {
                       if (_formKey.currentState.validate()) {
                         setState(() {
-                            _futureAlbum = createAlbum(_emailController.text,_phoneController.text,_placeController.text);
-                          _register();
+                          getLoc();
+                            _futureAlbum = createAlbum(_emailController.text,_phoneController.text,_currentPosition.latitude.toString(),_currentPosition.longitude.toString());
+                            print(_currentPosition.latitude.toString());
+                          print(_currentPosition.longitude.toString());
+                            _register();
                           _isLoading? Center(child: CircularProgressIndicator(),): Navigator.push(context, MaterialPageRoute(builder: (context)=>Myapp()));
+//                          _handleSignup(context);
                         });
                       }else{
                         print("Not Validated");

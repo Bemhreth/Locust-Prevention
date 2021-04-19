@@ -3,7 +3,7 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-Future<Album> createAlbum(String name,String phone,String place) async {
+Future<Album> createAlbum(String name,String phone,String latitude, String longitude) async {
   final http.Response response = await http.post(
     'http://34.71.91.164/registeringinfo',
     headers: <String, String>{
@@ -12,7 +12,8 @@ Future<Album> createAlbum(String name,String phone,String place) async {
     body: jsonEncode(<String, String>{
       'name': name,
       'phone': phone,
-      'place': place,
+      'latitude': latitude,
+      'longitude': longitude,
     }),
   );
 
